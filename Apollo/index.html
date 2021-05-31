@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Apollo Coding Challenge</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/355e72e83f.js" crossorigin="anonymous"></script>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="card">
+      <div class="stepper">
+
+        <div class="step" >
+          <div class="step-header">
+            <div class="step-marker active" id="step-one-mk"><span>1</span></div>
+            <span>Update Response</span>
+          </div>
+          <div class="step-body">
+            <div class="step-body-content" id="step-one">
+              <form id="step-one-form">  
+                <div class="row">                  
+                  <label for="radio-btn-true" class="custom-radio-container">
+                    <div class="one column">
+                      <input type="radio" id="radio-btn-true" name="consent" value="I give my consent">
+                      <span class="custom-radio-button"></span>
+                    </div> 
+                    <div class="nine columns"><span class="radio-label">I give my consent</span></div>
+                  </label>                                  
+                </div>
+                <div class="row">                    
+                  <label for="radio-btn-false" class="custom-radio-container">
+                    <div class="one column">
+                      <input type="radio" id="radio-btn-false" name="consent" value="I do not give my consent">
+                      <span class="custom-radio-button"></span>
+                    </div>
+                    <div class="nine columns"><span class="radio-label">I do not give my consent</span></div>
+                  </label>
+                </div>          
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-header">
+            <div class="step-marker" id="step-two-mk"><span>2</span></div>
+            <span>Select a method</span>
+          </div>
+          <div class="step-body">
+           <div class="step-body-content hidden" id="step-two">
+            <form action="javascript:0;">  
+                <div class="row">
+                  <label for="sms" class="custom-radio-container">
+                    <div class="one column">
+                      <input type="radio" id="sms" name="method" value="mobile phone">
+                      <span class="custom-radio-button"></span>
+                    </div>
+                    <div class="six columns"> <span class="radio-label">Text message (SMS)</span></div>           
+                    <div class="five columns"> <span class="radio-label">*** *** 3456</span></div>
+                  </label>
+                </div>
+                <div class="row">
+                  <label for="call" class="custom-radio-container">
+                    <div class="one column">
+                      <input type="radio" id="call" name="method" value="phone">
+                      <span class="custom-radio-button"></span>
+                    </div>
+                    <div class="six columns"> <span class="radio-label">Voice call</span></div>
+                    <div class="five columns"> <span class="radio-label">*** *** 3456</span></div>
+                  </label>
+                </div>    
+                <div class="row">
+                  <label for="mail" class="custom-radio-container">
+                    <div class="one column">
+                      <input type="radio" id="mail" name="method" value="email">
+                      <span class="custom-radio-button"></span>
+                    </div>
+                    <div class="six columns"> <span class="radio-label" value="email">Email</span></div>
+                    <div class="five columns"> <span class="radio-label" value="email adress">f****@iqvia.com</span></div>
+                  </label>
+                </div> 
+                <button class="primary-button" id="send-code-btn">Send code</button>       
+              </form>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-header ">
+            <div class="step-marker" id="step-three-mk"><span>3</span></div>
+            <span>Enter code</span>
+          </div>
+          <div class="step-body">
+            <div class="step-body-content hidden" id="step-three">
+              <p class=" message" id="message">
+              <small>Please check your messages (******3456) to obtain the validation code</small></p>
+              <form>                          
+                <input type="text" placeholder="Code"size="25" id="validation-code" maxlenght="12"> 
+                <p class="error-message"></p>                 
+              </form>
+              <a id="resend-code">Resend code</a>                     
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="twelve columns"><button class="primary-button" id="verify-btn" disabled>Verify</button></div>
+      </div>   
+    </div>
+  </div>
+
+<!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    line-height: normal;
+    margin:0;
+}
+
+.container {
+    padding-top: 80px;
+}
+
+.card {
+    width: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.04);
+    margin: 0 auto;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-header {
+    font-weight: 600;
+    position: relative;
+    padding-left: 20px;
+}
+
+.step-marker {
+    width: 24px;
+    height: 24px;
+    border-radius:20px;
+    background-color:#b5b5b5;    
+    position: absolute;
+    left: -10px;    
+    text-align: center;    
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.active {
+    background-color:#00c221;     
+    color:#FFFFFF;
+    text-align:center; 
+}
+
+.done {
+    background-color:#FFFFFF;    
+    color:#00c221;
+    text-align:center; 
+}
+
+.step-body {
+    padding: 16px;
+    border-left: 2px solid #b5b5b5;
+    animation-name: opendiv;
+    animation-duration: 1s;
+}
+
+.step:last-of-type > .step-body {
+    border-left: none;
+}
+input, button:disabled {
+    opacity: 0.5;
+}
+
+label{
+    font-weight: 400;;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.radio-label{
+    margin-left: 10px;    
+    line-height: 1.5;
+}
+
+.error {
+    border: 1px solid #B00020;
+}
+
+.error-message {
+    color: #B00020;
+    font-size:12px;
+    line-height: 0.8;    
+}
+
+.primary-button {
+    height: 40px;
+    margin: 16px 202px 0 4px;    
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(7, 104, 253, 0.32), 0 4px 16px 0 rgba(0, 0, 0, 0.04);
+    background-color: #0768fd;
+    color:#FFFFFF;
+    border:none;
+    padding:8px 16px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+}
+
+.primary-button:hover {
+    background-color: #003fc9;
+}
+
+.primary-button:focus {
+    background-color:#04347D;
+}
+.primary-button:active {
+    background-color:#294B7D;
+}
+
+.hidden {
+    /*display:none;    */
+    height: 0;
+    overflow:hidden;
+}
+
+.no-hidden {
+    height: 0;    
+    overflow:hidden;
+    animation: slide-up 1s ease forwards;
+}
+
+@keyframes slide-up {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 200px;
+    }
+}
+
+a {
+    font-weight: 600;
+    color: #0768fd;
+    text-decoration: none;
+    transition: all .3s ease;
+    cursor:pointer;
+}
+
+a:hover {
+    color: #003fc9;    
+}
+
+a:active {
+    color: #04347D;
+}
+
+#verify-btn {
+    width: 100%;
+}
+
+input:focus {
+    border: 1px solid #0768fd;
+    box-shadow: 0 4px 8px 0 rgba(7, 104, 253, 0.16), 0 4px 16px 0 rgba(0, 0, 0, 0.16);
+}
+  
+.custom-radio-container {
+    position:relative;
+}
+.custom-radio-container input {
+    position: absolute;
+    opacity: 0;    
+    height: 0;
+    width: 0;
+}
+
+.custom-radio-button {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #0768fd;
+    border-radius: 50%;
+}
+
+.custom-radio-container input:checked ~ .custom-radio-button {
+    display: block;    
+    background-color: #0768fd;
+    box-shadow: inset 0px 0px 0px 2px#FFFFFF;
+}
+
+.message {    
+    font-size:12px;    
+}
+
+
+
+
