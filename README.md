@@ -2,7 +2,9 @@
 Solution to IQVIA's FE developer Codetest 
 
 UI Mock: https://zpl.io/ad3B9l7
+
 Username: apollo_code_test
+
 Password: C0deTest!
 
 **Acceptance Criteria**
